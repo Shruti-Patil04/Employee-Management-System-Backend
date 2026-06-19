@@ -14,9 +14,13 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://employee-payroll-management-system-beta.vercel.app")
+                        .allowedOrigins(
+                            "https://employee-payroll-management-system-ashy.vercel.app",
+                            "https://employee-payroll-management-system-beta.vercel.app"
+                        )
                         .allowedMethods("*")
-                        .allowedHeaders("*");
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
